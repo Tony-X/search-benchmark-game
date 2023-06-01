@@ -62,7 +62,7 @@ fn main_inner(output_dir: &Path, index_delete_pct: i32) -> tantivy::Result<()> {
             // (title, date, body, label)
             let parsed_line: Vec<&str> = line.split('\t').collect();
             if parsed_line.len() != 4 {
-                println!("Skippig malformed line: {}", line);
+                println!("Skipping malformed line: {}", line);
                 num_skipped += 1;
                 continue;
             }

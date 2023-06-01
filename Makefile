@@ -1,5 +1,6 @@
 DEV_CORPUS := $(shell pwd)/corpus/20k-enwiki-20120502-lines-1k-fixed-utf8-with-random-label.txt
-REAL_CORPUS := "$(shell pwd)/corpus/enwiki-20120502-lines-1k-fixed-utf8-with-random-label.txt"
+#REAL_CORPUS := "$(shell pwd)/corpus/enwiki-20120502-lines-1k-fixed-utf8-with-random-label.txt"
+REAL_CORPUS := "/lucenedata/enwiki/enwiki-20120502-lines-1k-fixed-utf8-with-random-label.txt"
 
 WIKI_SRC = "http://home.apache.org/~mikemccand/enwiki-20120502-lines-1k-fixed-utf8-with-random-label.txt.lzma"
 
@@ -63,4 +64,4 @@ compile:
 serve:
 	@echo "--- Serving results ---"
 	@cp results.json web/build/results.json
-	@cd web/build && python3 -m http.server $(PORT) --bind localhost
+	@cd web/build && python3 -m http.server $(PORT) --bind 0.0.0.0
