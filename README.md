@@ -62,7 +62,7 @@ make clean
 
 # build the engines, also make indices using the dev corpus
 # the dev corpus is a down-sampled version of the larger corpus
-# this is useful for fast development/iteartion
+# this is useful for fast development/iteration
 make dev-index  
 
 # run the benchmark
@@ -72,20 +72,22 @@ make bench
 make serve
 ```
 
-## Bench with the full index
+## If that all works, you can build the complete index (takes longer, but more accurate results):
+
+
 ```
-# This downloads the 33M entries of wiki text
+# This downloads the 33M documents of English wikipedia text (NOTE: ~31 GB, stored locally under `corpus/*` by default
 make corpus
 
 make index
 make bench
 make serve
 
-# Note: make can take one liner like this
+# Note: make can take a one liner like this
 make index bench serve
 ```
 
 ## About the results...
-This repo is still work-in-progress of building the trust of the results. It tries to make an apple-to-apple comparison as much as possible. 
+This repo is still work-in-progress of building the trust of the results. It tries to make an apples-to-apples comparison as much as possible. 
 
-It is totally possible that your run of the benchmark turns out to be much different that mine. Make sure you take into account of your hardware environment when interpreting the results.
+Results will vary depending on your hardware!
