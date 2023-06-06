@@ -8,7 +8,7 @@ clean:
 clean-index:
 	@rm -fr idx
 
-index: binaries
+index: target/release/build_index
 	@echo "--- Indexing $(NAME) with $(INDEX_DELETE_PCT)% deletes ---"
 	@mkdir -p idx
 	@target/release/build_index idx $(INDEX_DELETE_PCT) < $(CORPUS)
