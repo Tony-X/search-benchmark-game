@@ -20,7 +20,7 @@ from mergedeep import merge
 # Installing dependencies:
 # pip3 install mergedeep
 
-# sed commands for easy changes to the results.json keys
+# sed commands for easy changes to the results.json keys:
 # sed -i -e "s/"tantivy-0.20"/"graviton-tantivy-0.20"/g" ./results_graviton.json
 # sed -i -e "s/"lucene-9.7.0"/"graviton-lucene-9.7.0"/g" ./results_graviton.json
 
@@ -62,4 +62,4 @@ if __name__ == "__main__":
             merge(merged_json, current_json)
 
     with open(args.output_json, "w") as out_file:
-        json.dump(merged_json, out_file)
+        json.dump(merged_json, out_file, indent=2, default=lambda obj: obj.__dict__)
