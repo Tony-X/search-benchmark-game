@@ -44,8 +44,17 @@ class SearchClient:
         recv = self.run_command(query_line)
         # print('  recv: ' + recv)
         tup = recv.split(' ', 1)
+
+        # Ignore responses from jfr diagnostics, sometimes the length of jfr response tuple is 1
+        if 1 <= len(tup) <= 2 and isinstance(tup[0], str) and tup[0][0] == '[':
+            elapsed_secs, result, jfr_debug = tup[0].strip('][').split('][')
+            # in form of 0.357s, removing trailing 's'
+            elapsed_micros = elapsed_secs[:-1] * 1000000
+            return elapsed_micros, None
+
         if len(tup) != 2:
             raise RuntimeError(f'malformed response "{recv}"\n{self.process.stderr.read().decode("utf-8")}')
+
         elapsed_nanos, result = tup
         elapsed_micros = int(elapsed_nanos) // 1000
         if result == "UNSUPPORTED":
