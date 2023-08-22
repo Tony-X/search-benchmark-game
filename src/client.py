@@ -1,10 +1,8 @@
 import subprocess
 import os
 from os import path
-import time
 import json
 import random
-from collections import defaultdict
 
 
 COMMANDS = os.environ['COMMANDS'].split(' ')
