@@ -47,7 +47,7 @@ class SearchClient:
         if 1 <= len(tup) <= 2 and isinstance(tup[0], str) and tup[0][0] == '[':
             elapsed_secs, result, jfr_debug = tup[0].strip('][').split('][')
             # in form of 0.357s, removing trailing 's'
-            elapsed_micros = elapsed_secs[:-1] * 1000000
+            elapsed_micros = float(elapsed_secs[:-1]) * 1000000
             return elapsed_micros, None
 
         if len(tup) != 2:
