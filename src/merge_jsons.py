@@ -15,7 +15,11 @@ Sample usage:
 import argparse
 import json
 
-from mergedeep import merge
+try:
+    from mergedeep import merge
+except ImportError as e:
+    print("Failed importing mergedeep, you may be missing this dependency.\nRun: 'pip3 install mergedeep' to install.\n")
+    raise e
 
 # Installing dependencies:
 # pip3 install mergedeep
