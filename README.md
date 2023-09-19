@@ -63,6 +63,7 @@ The workload is run against both engines in multiple iterations, including a war
 * JDK 17+. The are plenty of ways to install it.
 * Gradle - 8.1 or up.
 * Python3.6+.
+* Node.js - 18/19.
 
 ## Quick verification
 ```
@@ -91,6 +92,16 @@ make serve
 
 # Note: make can take one liner like this
 make index bench serve
+```
+
+## Rebuild the web UI
+```
+cd ./web
+yarn build
+```
+Will rebuild the UI. Then, in the top level directory, you can run the normal commands to see your changes:
+```
+make serve
 ```
 
 ## About the results...
