@@ -48,7 +48,7 @@ class Benchmark extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      mode: "COUNT",
+      mode: props.modes[0],
       tag: null
     };
   }
@@ -135,7 +135,7 @@ class Benchmark extends React.Component {
         }
       }
       if (min_engine != null) {
-        // Only useful if at least one engine supports this query 
+        // Only useful if at least one engine supports this query
         query_data[min_engine].className = "fastest";
         query_data[max_engine].className = "slowest";
         query_data.min_max_diff = max_microsecs / min_microsecs
