@@ -1,4 +1,4 @@
-NAME := "tantivy 0.20"
+NAME := "tantivy 0.21"
 export CORPUS
 
 clean:

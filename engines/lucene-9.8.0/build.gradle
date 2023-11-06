@@ -13,9 +13,9 @@ repositories {
 
 dependencies {
     // https://mvnrepository.com/artifact/org.apache.lucene/lucene-core
-    implementation group: 'org.apache.lucene', name: 'lucene-core', version: '9.7.0'
-    implementation group: 'org.apache.lucene', name: 'lucene-analysis-common', version: '9.7.0'
-    implementation group: 'org.apache.lucene', name: 'lucene-queryparser', version: '9.7.0'
+    implementation group: 'org.apache.lucene', name: 'lucene-core', version: '9.8.0'
+    implementation group: 'org.apache.lucene', name: 'lucene-analysis-common', version: '9.8.0'
+    implementation group: 'org.apache.lucene', name: 'lucene-queryparser', version: '9.8.0'
     implementation group: 'com.eclipsesource.minimal-json', name: 'minimal-json', version: '0.9.5'
 }
 

@@ -2,7 +2,7 @@ export CORPUS
 
 HEAP = 4g
 
-NAME ?= "Lucene 9.7.0"
+NAME ?= "Lucene 9.8.0"
 clean:
 	@echo "--- Cleaning $(NAME) ---"
 	@rm -fr idx
