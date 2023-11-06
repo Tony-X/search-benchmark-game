@@ -15,10 +15,14 @@ Sample usage:
 import argparse
 import json
 
-from mergedeep import merge
+try:
+    from mergedeep import merge
+except ImportError as e:
+    print("Failed importing mergedeep, you may be missing this dependency.\nRun: 'python3 -m pip install mergedeep --user' to install.\n")
+    raise e
 
 # Installing dependencies:
-# pip3 install mergedeep
+# python3 -m pip install mergedeep --user
 
 # sed commands for easy changes to the results.json keys:
 # sed -i -e "s/"tantivy-0.20"/"graviton-tantivy-0.20"/g" ./results_graviton.json
