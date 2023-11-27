@@ -1,6 +1,7 @@
 # Analyzing Search Benchmark Game Data in Jupyter Notebooks
 Tested with Python 3.11
 ## Using pipenv
+```
 % pipenv install
 Creating a virtualenv for this project...
 ✔ Successfully created virtual environment! 
@@ -20,3 +21,8 @@ Installing pandas...
 Adding pandas to Pipfile's [packages]...
 ✔ Installation Succeeded 
 (notebooks) % jupyter notebook
+```
+
+Running all cells on the notebook will produce a chart like this. In the notebook, you can mouseover datapoints to see
+the actual query.
+![](tantivy-lucene-chart-example.png)
