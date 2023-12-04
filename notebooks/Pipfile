@@ -8,6 +8,7 @@ jupyter = "*"
 pandas = "*"
 seaborn = "*"
 plotly = "*"
+jsonpath-ng = "*"
 
 [dev-packages]
 
